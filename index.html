@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Transaction Crawler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Ethereum Transaction Crawler</h1>
+    
+    <div class="container">
+        <h2>Pretraži transakcije</h2>
+        <div>
+            <label for="walletAddress">Ethereum adresa:</label>
+            <input type="text" id="walletAddress" placeholder="0x..." value="0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f">
+        </div>
+        <div>
+            <label for="startBlock">Početni blok:</label>
+            <input type="text" id="startBlock" placeholder="9000000" value="9000000">
+        </div>
+        <div>
+            <label for="apiKeyInput">Etherscan API ključ:</label>
+            <input type="text" id="apiKeyInput" placeholder="Vaš Etherscan API ključ">
+        </div>
+        <button id="searchBtn">Pretraži</button>
+        <div id="error" class="error"></div>
+        <div id="main-error" class="error"></div>
+    </div>
+
+    <div id="loading" class="loading">
+        <p>Učitavanje transakcija, molimo sačekajte...</p>
+    </div>
+
+    <div id="results">
+        <h2>Rezultati</h2>
+        <p id="summaryInfo"></p>
+        <div id="pagination" class="pagination"></div>
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th>Blok</th>
+                    <th>Vreme</th>
+                    <th>Tip</th>
+                    <th>Od adrese</th>
+                    <th>Ka adresi</th>
+                    <th>Vrednost (ETH)</th>
+                    <th>Gas (ETH)</th>
+                    <th>Hash</th>
+                </tr>
+            </thead>
+            <tbody id="transactionsBody">
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+    <div class="container">
+        <h2>Stanje ETH na određeni datum</h2>
+        <div>
+            <label for="balanceWalletAddress">Ethereum adresa:</label>
+            <input type="text" id="balanceWalletAddress" placeholder="0x..." value="0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f">
+        </div>
+        <div>
+            <label for="balanceDate">Datum (YYYY-MM-DD):</label>
+            <input type="date" id="balanceDate">
+        </div>
+        <div>
+            <label for="balanceApiKey">Etherscan API ključ:</label>
+            <input type="text" id="balanceApiKey" placeholder="Vaš Etherscan API ključ">
+        </div>
+        <button id="checkBalanceBtn">Proveri stanje</button>
+        <div id="balanceError" class="error"></div>
+    </div>
+
+    <div id="balanceLoading" class="loading">
+        <p>Računanje stanja, molimo sačekajte...</p>
+    </div>
+
+    <div id="balanceResult" class="balance-result"></div>
+    
+    <div id="tokenResults" class="hidden">
+        <h2>ERC-20 Token Transakcije</h2>
+        <p id="tokenSummaryInfo"></p>
+        <div id="tokenPagination" class="pagination"></div>
+        <table id="tokenTransactionsTable">
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Blok</th>
+                    <th>Vreme</th>
+                    <th>Tip</th>
+                    <th>Od adrese</th>
+                    <th>Ka adresi</th>
+                    <th>Vrednost</th>
+                    <th>Hash</th>
+                </tr>
+            </thead>
+            <tbody id="tokenTransactionsBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.10.0/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
