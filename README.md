@@ -16,7 +16,6 @@ This application allows users to search Ethereum transactions and check the bala
 ## Running the Application
 1. Clone the repository
 2. Open `index.html` in a browser
-3. Enter the Ethereum address, API key, and click on "Search"
 
 ## How to Use
 **Search Transactions:**
