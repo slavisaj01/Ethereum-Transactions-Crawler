@@ -12,7 +12,6 @@ proveravaju stanje ETH i ERC-20 tokena na određeni datum, koristeći Etherscan 
 ## Tehnologije
 - HTML, CSS, JavaScript
 - Web3.js
-- Moment.js
 - Etherscan API
 
 ## Pokretanje
