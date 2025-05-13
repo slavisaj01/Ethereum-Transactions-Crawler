@@ -93,16 +93,12 @@ async function getTransactions() {
     loadingElement.style.display = "block";
     
     try {
-        // Dobavljanje normalnih transakcija
         const txs = await fetchTransactions(address, startBlock, apiKey);
         
-        // Dobavljanje internih transakcija
         const internalTxs = await fetchInternalTransactions(address, startBlock, apiKey);
         
-        // Dobavljanje token transakcija
         tokenTransactions = await fetchTokenTransactions(address, startBlock, apiKey);
         
-        // Kombinovanje i sortiranje normalnih i internih transakcija
         transactions = [...txs, ...internalTxs].sort((a, b) => 
             parseInt(a.blockNumber) - parseInt(b.blockNumber)
         );
@@ -112,7 +108,6 @@ async function getTransactions() {
         
         displayTransactions();
         
-        // Prikaz token transakcija ako ih ima
         if (tokenTransactions.length > 0) {
             document.getElementById('tokenResults').style.display = "block";
             document.getElementById('tokenSummaryInfo').textContent = `Pronađeno ${tokenTransactions.length} token transakcija.`;
