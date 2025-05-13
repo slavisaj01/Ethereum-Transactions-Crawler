@@ -22,13 +22,13 @@ This application allows users to search Ethereum transactions and check the bala
 - Enter the Ethereum address (e.g., `0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f`)
 - Set the starting block (e.g., `9000000`)
 - Enter your Etherscan API key
-- Click on "Search"
+- Click on "Pretraži"
 - Transactions will be displayed in a table with pagination to navigate through the results
 
 **Check Balance on a Specific Date:**
 - In the balance check section, enter the address and the date
 - Add your API key
-- Click on "Check Balance"
+- Click on "Proveri stanje"
 - The system will display the ETH and ERC-20 token balances for that date
 
 ## Note
