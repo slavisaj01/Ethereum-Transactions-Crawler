@@ -1,44 +1,36 @@
 # Ethereum-Transactions-Crawler
 
-Ova aplikacija omogućava korisnicima da pretražuju Ethereum transakcije i 
-proveravaju stanje ETH i ERC-20 tokena na određeni datum, koristeći Etherscan API.
+This application allows users to search Ethereum transactions and check the balance of ETH and ERC-20 tokens on a specific date using the Etherscan API.
 
-## Funkcionalnosti
-- Pretraga normalnih, internih i ERC-20 transakcija
-- Unos početnog bloka za pretragu
-- Paginacija rezultata
-- Provera ETH i token stanja na određeni datum
+## Features
+- Search for normal, internal, and ERC-20 transactions
+- Set the starting block for the search
+- Pagination of results
+- Check ETH and token balances on a specific date
 
-## Tehnologije
+## Technologies
 - HTML, CSS, JavaScript
 - Web3.js
 - Etherscan API
 
-## Pokretanje
-1. Klonirajte repozitorijum
-2. Otvorite `index.html` u pretraživaču
-3. Unesite Ethereum adresu, API ključ i kliknite na "Pretraži"
+## Running the Application
+1. Clone the repository
+2. Open `index.html` in a browser
+3. Enter the Ethereum address, API key, and click on "Search"
 
-## Uputstvo za korišćenje
-Pretraga transakcija:
-Unesite Ethereum adresu (npr. 0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f)
+## How to Use
+**Search Transactions:**
+- Enter the Ethereum address (e.g., `0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f`)
+- Set the starting block (e.g., `9000000`)
+- Enter your Etherscan API key
+- Click on "Search"
+- Transactions will be displayed in a table with pagination to navigate through the results
 
-Postavite početni blok (npr. 9000000)
+**Check Balance on a Specific Date:**
+- In the balance check section, enter the address and the date
+- Add your API key
+- Click on "Check Balance"
+- The system will display the ETH and ERC-20 token balances for that date
 
-Upišite svoj Etherscan API ključ
-
-Kliknite na Pretraži
-
-Transakcije će biti prikazane u tabeli sa mogućnošću prelaska kroz stranice
-
-## Provera stanja na određeni datum:
-U odeljku za proveru stanja unesite adresu i datum
-
-Dodajte API ključ
-
-Kliknite na Proveri stanje
-
-Sistem prikazuje stanje ETH i ERC-20 tokena za taj datum
-
-## Napomena
-Za rad aplikacije potreban je besplatan Etherscan API ključ: [https://etherscan.io/apis](https://etherscan.io/apis)
+## Note
+To use the application, you need a free Etherscan API key: [https://etherscan.io/apis](https://etherscan.io/apis)
